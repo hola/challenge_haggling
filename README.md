@@ -5,7 +5,8 @@ Welcome to Hola programming challenge!
 1. First prize: 3000 USD.
 2. Second prize: 2000 USD.
 3. Third prize: 1000 USD.
-4. If you email the link to this page to someone, with challengejs@hola.org in CC, and they enter the competition and win a prize, you will receive half the amount they get (only the first referrer per participant).
+4. We might award one special prize of 400 USD at our discretion.
+5. If you email the link to this page to someone, with challengejs@hola.org in CC, and they enter the competition and win a prize, you will receive half the amount they get (only the first referrer per participant).
 
 ## Rules
 
