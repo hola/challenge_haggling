@@ -36,7 +36,7 @@ Here is how the negotiations might go:
 
 Unknown to you, the partners valuation was: $2 for a ball, $2 for a hat, nothing for a book. Your agreement brought $6 to you and $8 to your partner.
 
-In general, there are two or more types of objects, and a positive number of objects of each type. Each type of object is worth some nonnegative integer to each partner. The total value of all objects for each of the partners is the same, althoug the particular valuations are, in general, different between the partners. A proposed split must distribute all objects between partners; individual objects cannot be partitioned.
+In general, there are two or more types of objects, and a positive number of objects of each type. Each type of object is worth some nonnegative integer to each partner. The total value of all objects for each of the partners is the same, although the particular valuations are, in general, different between the partners. A proposed split must distribute all objects between partners; individual objects cannot be partitioned.
 
 Your goal is to write a script that tries to maximize the value of its deal.
 
@@ -97,7 +97,7 @@ wss://hola.org/challenges/haggling/arena/standard
 
 Use `haggle.js` to connect to it either as a human agent, or with your script. In this mode, the `--id` command-line option is required: it is a unique ID that will be used to track your scores. We recommend using your email address with a random string appended to it as the ID. **We won't publish this ID.** Later on, we'll launch a leaderboard where the top average scores (that is, the average score per deal) will be pubished along with the *hash* of the ID.
 
-The server and the leaderboard are purely for your information and entertaintment. The leaderboard scores will have no effect on the final standings, and you are not required to use the server at all. However, it can be a useful way to see where you stand, and to accumulate learning data to improve your script.
+The server and the leaderboard are purely for your information and entertainment. The leaderboard scores will have no effect on the final standings, and you are not required to use the server at all. However, it can be a useful way to see where you stand, and to accumulate learning data to improve your script.
 
 If you have a working script, we recommend running it repeatedly whenever your computer is powered on, such as with the following UNIX shell one-liner:
 
