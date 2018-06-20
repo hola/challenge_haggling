@@ -10,7 +10,7 @@ Welcome to Hola programming challenge!
 
 See also the [Russian version](https://habr.com/company/hola/blog/414723/) of this page.
 
-## Rules
+z## Rules
 
 * Submit your solution to our [form](https://hola.org/challenges/haggling). Do not send solutions by e-mail!
 * Submission deadline: **July 20, 2018**, 23:59:59 UTC.
@@ -87,7 +87,7 @@ For the final testing, we will use the default parameters of the testing script,
 
 The testing will happen on Ubuntu 14.04 (amd64) on a [c3.large](https://aws.amazon.com/ru/ec2/instance-types/#c3) Amazon AWS instance, one pair another, with no other load on the machine.
 
-Bugs reported by participants will get fixed. Please include the log of the problematic session (use `--log` to obtain) when reporting a bug.
+Bugs reported by participants will get fixed, watch the [changelog](src/CHANGELOG.md) for updates. Please include the log of the problematic session (use `--log` to obtain) when reporting a bug.
 
 ### Online negotiations
 
