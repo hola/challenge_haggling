@@ -8,6 +8,8 @@ Welcome to Hola programming challenge!
 4. We might award one special prize of 400 USD at our discretion.
 5. If you email the link to this page to someone, with challengejs@hola.org in CC, and they enter the competition and win a prize, you will receive half the amount they get (only the first referrer per participant).
 
+See also the [Russian version](https://habr.com/company/hola/blog/414723/) of this page.
+
 ## Rules
 
 * Submit your solution to our [form](https://hola.org/challenges/haggling). Do not send solutions by e-mail!
