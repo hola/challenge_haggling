@@ -60,7 +60,7 @@ module.exports = class {
 An instance of this class is created once for a negotiation session. The constructor receives the following arguments:
 
 * `me` is 0 if your turn is first, and 1 if your turn is second.
-* `counts` is an array of integers, describing how many of each type of object there is. This array is between 1 and 10 elements long.
+* `counts` is an array of integers, describing how many of each type of object there is. This array is between 2 and 10 elements long.
 * `values` is an array of integers the same length as `counts`, describing how much every object is worth to you.
 * `max_rounds` is the limit on the number of rounds in the negotiations; a round is two turns, one by each partner.
 * `log` is a function which your code can call to output a message for debugging.
