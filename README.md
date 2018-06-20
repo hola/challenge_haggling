@@ -63,7 +63,7 @@ An instance of this class is created once for a negotiation session. The constru
 * `counts` is an array of integers, describing how many of each type of object there is. This array is between 2 and 10 elements long.
 * `values` is an array of integers the same length as `counts`, describing how much every object is worth to you.
 * `max_rounds` is the limit on the number of rounds in the negotiations; a round is two turns, one by each partner.
-* `log` is a function which your code can call to output a message for debugging.
+* `log` is a function which your code can call to output a message for debugging (`console.log` won't work).
 
 The `offer` method is called each time when it's your turn. Its argument `o` is an array of integers the same size as `counts`, which describes how many of each type of object the partner offers to you. If your turn is first, and this is the first round, `o` is `undefined`.
 
