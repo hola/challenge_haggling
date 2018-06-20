@@ -311,13 +311,13 @@ class Logger extends log.Logger {
     _agent_prefix(agent){
         return agent_prefix(agent, this.labels && this.labels[agent]);
     }
-    log_init(labels, counts){
+    log_init(labels, counts, max_rounds){
         this.labels = labels;
         this.counts = counts;
         let output = 'There are ';
         output += format_list(counts.map(
             (c, i)=>c>1 ? `${c} ${item_names[i]}s` : `a ${item_names[i]}`));
-        output += '.';
+        output += `. You have ${max_rounds} rounds to reach an agreement.`;
         this._write(chalk.blue.bold(output));
     }
     log_offer(agent, partition){
