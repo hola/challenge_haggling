@@ -41,8 +41,7 @@ class Client {
                     json.opt.max_rounds);
                 break;
             case 'offer':
-                this.logger.log('offer', 1-this.me,
-                    this._expand(1-this.me, json.offer));
+                this.logger.log('offer', 1-this.me, this._expand(json.offer));
                 this.agent.offer(json.offer);
                 break;
             case 'log':
@@ -66,7 +65,7 @@ class Client {
     }
     _on_offer(o){
         this.ws.send(JSON.stringify({type: 'offer', offer: o}));
-        this.logger.log('offer', this.me, this._expand(this.me, o));
+        this.logger.log('offer', this.me, this._expand(o));
     }
     _on_info(text){
         this.ws.send(JSON.stringify({type: 'info', text}));
@@ -77,12 +76,12 @@ class Client {
         this.logger.log('abort', this.me, reason);
         this.destroy(true);
     }
-    _expand(turn, o){
+    _expand(o){
         if (!o)
             return;
         let res = new Array(2);
-        res[turn] = o;
-        res[1-turn] = o.map((n, i)=>this.counts[i]-n);
+        res[this.me] = o;
+        res[1-this.me] = o.map((n, i)=>this.counts[i]-n);
         return res;
     }
     destroy(close){
