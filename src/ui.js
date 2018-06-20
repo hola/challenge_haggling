@@ -156,7 +156,7 @@ class OfferPrompt extends events.EventEmitter {
         if (active)
             style = style.greenBright.underline;
         else
-            style = style.whiteBright;
+            style = style.green;
         return style(text);
     }
     _render(){
@@ -318,7 +318,7 @@ class Logger extends log.Logger {
         output += format_list(counts.map(
             (c, i)=>c>1 ? `${c} ${item_names[i]}s` : `a ${item_names[i]}`));
         output += '.';
-        this._write(chalk.whiteBright.bold(output));
+        this._write(chalk.blue.bold(output));
     }
     log_offer(agent, partition){
         let output = this._agent_prefix(agent);
@@ -354,11 +354,11 @@ class Logger extends log.Logger {
     log_done(agreed){
         let output = agreed
             ? 'Agreement achieved.' : 'Agreement not achieved.';
-        this._write(chalk.whiteBright.bold(output));
+        this._write(chalk.blueBright.bold(output));
     }
     log_seed(seed){
-        let output = `Using pseudo-random seed ${seed}`;
-        this._write(chalk.whiteBright.bold(output));
+        let output = `Using pseudo-random seed ${seed}.`;
+        this._write(chalk.blue.bold(output));
     }
     log_valuation(agent, values){
         let output = `For ${agent_styles[agent](agent_names[agent])}, `;
@@ -371,7 +371,7 @@ class Logger extends log.Logger {
         this._write(output);
     }
     log_network(text){
-        let output = chalk.cyan(text);
+        let output = chalk.yellow(text);
         this._write(output);
     }
 }
