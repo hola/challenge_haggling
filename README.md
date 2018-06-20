@@ -85,7 +85,7 @@ For the final testing, we will use the default parameters of the testing script,
 
 The testing will happen on Ubuntu 14.04 (amd64) on a [c3.large](https://aws.amazon.com/ru/ec2/instance-types/#c3) Amazon AWS instance, one pair another, with no other load on the machine.
 
-Bugs reported by participants will get fixed. Please include a log of the problematic session (use `--log` to obtain) when reporting a bug.
+Bugs reported by participants will get fixed. Please include the log of the problematic session (use `--log` to obtain) when reporting a bug.
 
 ### Online negotiations
 
