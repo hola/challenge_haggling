@@ -91,7 +91,8 @@ We are providing a server that lets your script negotiate with scripts of other 
 
 Currently, we are providing one arena with the default settings (3 object types, between 1 and 5 objects of each type, the total value for each partner $10, and a limit of 5 rounds). This arena does not enforce the 1-second timeout, so as to allow humans to participate. The URL to this arena is:
 
-```wss://hola.org/challenges/haggling/arena/standard
+```
+wss://hola.org/challenges/haggling/arena/standard
 ```
 
 Use `haggle.js` to connect to it either as a human agent, or with your script. In this mode, the `--id` command-line option is required: it is a unique ID that will be used to track your scores. We recommend using your email address with a random string appended to it as the ID. **We won't publish this ID.** Later on, we'll launch a leaderboard where the top average scores (that is, the average score per deal) will be pubished along with the *hash* of the ID.
@@ -100,7 +101,8 @@ The server and the leaderboard are purely for your information and entertaintmen
 
 If you have a working script, we recommend running it repeatedly whenever your computer is powered on, such as with the following UNIX shell one-liner:
 
-```while true; do node haggle.js --id me@example.com:1234abcd myscript.js wss://hola.org/challenges/haggling/arena/standard; done
+```
+while true; do node haggle.js --id me@example.com:1234abcd myscript.js wss://hola.org/challenges/haggling/arena/standard; done
 ```
 
 ### Submitting your solution
