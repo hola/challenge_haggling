@@ -10,7 +10,7 @@ Welcome to Hola programming challenge!
 
 See also the [Russian version](https://habr.com/company/hola/blog/414723/) of this page.
 
-z## Rules
+## Rules
 
 * Submit your solution to our [form](https://hola.org/challenges/haggling). Do not send solutions by e-mail!
 * Submission deadline: **July 20, 2018**, 23:59:59 UTC.
