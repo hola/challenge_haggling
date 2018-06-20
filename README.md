@@ -19,6 +19,7 @@ Welcome to Hola programming challenge!
 * If your JS file is generated, minified and/or compiled from a different language like CoffeeScript, please submit an archive with the complete sources, and possibly a description of your approach. We will publish it, but won't test it.
 * It is **not allowed to require any JS modules**, not even the standard ones built into Node.js.
 * We need to know your full name, but we can publish your solution under a pseudonym instead, if you prefer. We will not publish your email address.
+* Current or former Hola employees and memers of their immediate families can only participate off-contest, without winning prizes.
 * Questions about the problem statement? Send them to challengejs@hola.org.
 
 ## Haggling
