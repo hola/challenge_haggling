@@ -79,7 +79,7 @@ See [example.js](src/example.js) for a very simple example of a negotiation scri
 
 ### Testing
 
-The [haggle.js](src/haggle.js) script allows you to stage negotiations between two human agents, between a human and a script, and between two scripts. Run it with `--help` to see what it can do.
+The [haggle.js](src/haggle.js) script allows you to stage negotiations between two human agents, between a human and a script, and between two scripts. Run it with `--help` to see what it can do. You should run `npm install` in the `src` directory to instal the required modules.
 
 We are going to judge the contest by running negotiations pariwise between the submitted solutions. We hope to run at least two sessions for each possible pair, but if we receive a lot of solutions, we might have to resort to a different tournament system to make testing feasible. The exact details of the tournament system will be announced later. In any case, what matters is the total value that the solution receives from all the deals it makes, not “wins” or “losses”. The winning script is the one that manages to accumulate the most value from all the deals it strikes.
 
