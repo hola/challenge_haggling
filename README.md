@@ -21,6 +21,7 @@ See also the [Russian version](https://habr.com/company/hola/blog/414723/) of th
 * Your submission must be in JS. If you prefer CoffeeScript or similar, translate to JS before submitting.
 * If your JS file is generated, minified and/or compiled from a different language like CoffeeScript, please submit an archive with the complete sources, and possibly a description of your approach. We will publish it, but won't test it.
 * It is **not allowed to require any JS modules**, not even the standard ones built into Node.js.
+* One participant may upload solutions using only one email address. Uploading several solutions in “collusion” with each other from different email addresses is prohibited; all solutions participating in such a scheme will be disqualified.
 * We need to know your full name, but we can publish your solution under a pseudonym instead, if you prefer. We will not publish your email address.
 * Current or former Hola employees and members of their immediate families can only participate off-contest, without winning prizes.
 * Questions about the problem statement? Send them to challengejs@hola.org.
