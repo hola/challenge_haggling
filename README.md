@@ -27,7 +27,7 @@ See also the [Russian version](https://habr.com/company/hola/blog/414723/) of th
 
 ## Haggling
 
-Let's say there are a book, two hats and three balls. You and a partner have to decide how to split these objects between the two of you. To you, the book is worth $4, a ball $2, and the hats are worthless. The partner might value the same objects differently; you don't know their valuation, but you know that the total worth of all objects is the same as for you, in this case, $10.
+Let's say there are a book, two hats, and three balls. You and a partner have to decide how to split these objects between the two of you. To you, the book is worth $4, a ball $2, and the hats are worthless. The partner might value the same objects differently; you don't know their valuation, but you know that the total worth of all objects is the same as for you, in this case, $10.
 
 You and the partner take turns making offers to each other about how to split the goods. On each turn, one can either accept the partner's offer (except on the very first turn), or make a counter-offer. The negotiations are limited to 5 rounds (that is, there can be up to 10 offers in total). If an agreement is reached, each of you receives the amount that their part of the goods is worth to them. If there is still no agreement after the last turn (that is, the last word is a counter-offer rather than acceptance), neither partner receives anything at all. The same happens if one of the partners walks away from the negotiations.
 
@@ -38,7 +38,7 @@ Here is how the negotiations might go:
 3. **You:** I don't accept. I want the book and a ball; you get two balls and both hats.
 4. **Other:** I accept.
 
-Unknown to you, the partners valuation was: $2 for a ball, $2 for a hat, nothing for a book. Your agreement brought $6 to you and $8 to your partner.
+Unknown to you, the partner's valuation was: $2 for a ball, $2 for a hat, nothing for a book. Your agreement brought $6 to you and $8 to your partner.
 
 In general, there are two or more types of objects, and a positive number of objects of each type. Each type of object is worth some nonnegative integer to each partner. The total value of all objects for each of the partners is the same, although the particular valuations are, in general, different between the partners. A proposed split must distribute all objects between partners; individual objects cannot be partitioned.
 
@@ -75,13 +75,13 @@ There is a timeout of 1 second per turn. If the code times out, throws an except
 
 The module won't be allowed to learn, i.e. to keep any data persistent between sessions.
 
-See [example.js](src/example.js) for a very simple example of a negotiation script. It will accept any offer that allows it to receive at least half of the total value; otherwise it simply demands all items with nonzero value. It also demonstrates the use of the `log` function.
+See [example.js](src/example.js) for a very simple example of a negotiation script. It will accept any offer that allows it to receive at least half of the total value; otherwise, it simply demands all items with nonzero value. It also demonstrates the use of the `log` function.
 
 ### Testing
 
-The [haggle.js](src/haggle.js) script allows you to stage negotiations between two human agents, between a human and a script, and between two scripts. Run it with `--help` to see what it can do. You should run `npm install` in the `src` directory to instal the required modules.
+The [haggle.js](src/haggle.js) script allows you to stage negotiations between two human agents, between a human and a script, and between two scripts. Run it with `--help` to see what it can do. You should run `npm install` in the `src` directory to install the required modules.
 
-We are going to judge the contest by running negotiations pariwise between the submitted solutions. We hope to run at least two sessions for each possible pair, but if we receive a lot of solutions, we might have to resort to a different tournament system to make testing feasible. The exact details of the tournament system will be announced later. In any case, what matters is the total value that the solution receives from all the deals it makes, not “wins” or “losses”. The winning script is the one that manages to accumulate the most value from all the deals it strikes.
+We are going to judge the contest by running negotiations pairwise between the submitted solutions. We hope to run at least two sessions for each possible pair, but if we receive a lot of solutions, we might have to resort to a different tournament system to make testing feasible. The exact details of the tournament system will be announced later. In any case, what matters is the total value that the solution receives from all the deals it makes, not “wins” or “losses”. The winning script is the one that manages to accumulate the most value from all the deals it strikes.
 
 For the final testing, we will use the default parameters of the testing script, that is, 3 object types, between 1 and 5 objects of each type, the total value for each partner $10, and a limit of 5 rounds. We recommend that solutions support all combinations of parameters that are allowed by the test script.
 
@@ -99,7 +99,7 @@ Currently, we are providing one arena with the default settings (3 object types,
 wss://hola.org/challenges/haggling/arena/standard
 ```
 
-Use `haggle.js` to connect to it either as a human agent, or with your script. In this mode, the `--id` command-line option is required: it is a unique ID that will be used to track your scores. We recommend using your email address with a random string appended to it as the ID. **We won't publish this ID.** Later on, we'll launch a leaderboard where the top average scores (that is, the average score per deal) will be pubished along with the *hash* of the ID.
+Use `haggle.js` to connect to it either as a human agent or with your script. In this mode, the `--id` command-line option is required: it is a unique ID that will be used to track your scores. We recommend using your email address with a random string appended to it as the ID. **We won't publish this ID.** Later on, we'll launch a leaderboard where the top average scores (that is, the average score per deal) will be published along with the *hash* of the ID.
 
 The server and the leaderboard are purely for your information and entertainment. The leaderboard scores will have no effect on the final standings, and you are not required to use the server at all. However, it can be a useful way to see where you stand, and to accumulate learning data to improve your script.
 
