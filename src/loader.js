@@ -10,12 +10,6 @@ class AI extends events.EventEmitter {
         this.timer = undefined;
         this.timeout = timeout;
         this.worker = cluster.fork({script});
-        this.worker.addListener('online', ()=>{
-            this.worker.send({type: 'init',
-                data: [me, counts, values, max_rounds]});
-            if (me==0)
-                this.offer();
-        });
         this.worker.addListener('message', ({type, data})=>{
             switch (type)
             {
@@ -37,6 +31,10 @@ class AI extends events.EventEmitter {
                 return this.emit('abort', data);
             }
         });
+        this.worker.send({type: 'init',
+            data: [me, counts, values, max_rounds]});
+        if (me==0)
+            this.offer();
     }
     label(){ return 'script'; }
     offer(o){
