@@ -113,7 +113,7 @@ while true; do node haggle.js --id me@example.com:1234abcd myscript.js wss://hol
 
 Please submit your solutions using [this form](https://hola.org/challenges/haggling). We don't accept submissions by email.
 
-Some solutions might contain code or data that is generated, minified or translated from another language; therefore we require that the source code be submitted as well. If the code or data is generated, please include the generator; if it's minified, include the original version; if it's compiled from a different language such as CoffeeScript, include the original code. We also appreciate if you include a brief README file with some explanation of your approach (in English). Please submit the above as a tar.gz, tar.bz2, or zip archive. The contents of this archive will be published, but won't be tested.
+Some solutions might contain code or data that is generated, minified or translated from another language; in such cases, we require that the source code be submitted as well. If the code or data is generated, please include the generator; if it's minified, include the original version; if it's compiled from a different language such as CoffeeScript, include the original code. We also appreciate if you include a brief README file with some explanation of your approach (in English). Please submit the above as a tar.gz, tar.bz2, or zip archive. The contents of this archive will be published, but won't be tested.
 
 We have set the maximum size of the submitted script (not including the source archive) to 64 MiB. This is an arbitrary number chosen simply to prevent someone from filling our disks with a single submission. If your solution is legitimately bigger than 64 MiB, please take contact, and we'll make a reasonable increase.
 
