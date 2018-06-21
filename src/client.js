@@ -45,8 +45,7 @@ class Client {
                 break;
             case 'offer':
                 this.logger.log('offer', 1-this.me, this._expand(json.offer));
-                if (json.offer)
-                    this.agent.offer(json.offer);
+                this.agent.offer(json.offer);
                 break;
             case 'log':
                 this.logger.log(...json.arg);
