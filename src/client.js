@@ -1,10 +1,13 @@
 'use strict'; /*jslint node:true*/
+const crypto = require('crypto');
 const ws = require('ws');
 
 class Client {
     constructor(url, id, mk_agent, logger){
+        let hash = crypto.createHash('md5').update(id).digest('hex');
         this.logger = logger;
-        this.logger.log('network', `Connecting to ${url}...`);
+        this.logger.log('network',
+            `Connecting to ${url} (ID hash ${hash})...`);
         this.ws = new ws(url, {headers: {'X-Hola-Challenge-ID': id}});
         this.ws.onopen = this._on_open.bind(this);
         this.ws.onclose = this._on_close.bind(this);
