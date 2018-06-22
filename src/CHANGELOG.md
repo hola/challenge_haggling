@@ -10,3 +10,9 @@
 
 * Added logging of ID hash when connecting to a remote server
 * Fixed crash on Windows when Bob is a local script
+
+## 2018-06-22
+
+* Fixed documentation: --min-objects and --max-objects are about the total number of objects rather than objects per type
+* Set default --max-objects to 6 and documented that
+

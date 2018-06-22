@@ -84,7 +84,7 @@ The [haggle.js](src/haggle.js) script allows you to stage negotiations between t
 
 We are going to judge the contest by running negotiations pairwise between the submitted solutions. We hope to run at least two sessions for each possible pair, but if we receive a lot of solutions, we might have to resort to a different tournament system to make testing feasible. The exact details of the tournament system will be announced later. In any case, what matters is the total value that the solution receives from all the deals it makes, not “wins” or “losses”. The winning script is the one that manages to accumulate the most value from all the deals it strikes.
 
-For the final testing, we will use the default parameters of the testing script, that is, 3 object types, between 1 and 5 objects of each type, the total value for each partner $10, and a limit of 5 rounds. We recommend that solutions support all combinations of parameters that are allowed by the test script.
+For the final testing, we will use the default parameters of the testing script, that is, 3 object types, up to 6 objects total, the total value for each partner $10, and a limit of 5 rounds. We recommend that solutions support all combinations of parameters that are allowed by the test script.
 
 The testing will happen on Ubuntu 14.04 (amd64) on a [c3.large](https://aws.amazon.com/ru/ec2/instance-types/#c3) Amazon AWS instance, one pair another, with no other load on the machine.
 
@@ -94,7 +94,7 @@ Bugs reported by participants get fixed, watch the [changelog](src/CHANGELOG.md)
 
 We are providing a server that lets your script negotiate with scripts of other participants. It works like a typical online game server: you connect to an “arena”, and the server pairs you with another participant who wants to play.
 
-Currently, we are providing one arena with the default settings (3 object types, between 1 and 5 objects of each type, the total value for each partner $10, and a limit of 5 rounds). This arena does not enforce the 1-second timeout, so as to allow humans to participate. The URL to this arena is:
+Currently, we are providing one arena with the default settings (3 object types, up to 6 objects total, the total value for each partner $10, and a limit of 5 rounds). This arena does not enforce the 1-second timeout, so as to allow humans to participate. The URL to this arena is:
 
 ```
 wss://hola.org/challenges/haggling/arena/standard

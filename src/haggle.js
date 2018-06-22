@@ -16,8 +16,8 @@ const getopt = require('node-getopt').create([
         'pseudo-random seed for session parameters (default: random)'],
     ['I', 'id=ID', 'agent identifier for the remote server'],
     ['T', 'types=N', 'types of objects (default: 3)'],
-    ['m', 'min-objects=N', 'minimum objects per type (default: 1)'],
-    ['M', 'max-objects=N', 'maximum objects per type (default: 5)'],
+    ['m', 'min-objects=N', 'minimum total number of objects (default: 1)'],
+    ['M', 'max-objects=N', 'maximum total number of objects (default: 6)'],
     ['V', 'total-value=V', 'total value of all objects (default: 10)'],
     ['R', 'max-rounds=N', 'maximum number of negotiation rounds (default: 5)'],
     ['u', 'unsafe', 'use unsafe, in-process script loader without VM'],
@@ -117,9 +117,9 @@ function main(){
         if (options.types)
             die('--types cannot be used with a remote server');
         if (options['min-objects'])
-            die('--min-ojbects cannot be used with a remote server');
+            die('--min-objects cannot be used with a remote server');
         if (options['max-objects'])
-            die('--max-ojbects cannot be used with a remote server');
+            die('--max-objects cannot be used with a remote server');
         if (options['total-value'])
             die('--total-value cannot be used with a remote server');
         if (options['max-rounds'])
@@ -135,14 +135,14 @@ function main(){
             seed = Math.random()*0x7fffffff|0;
         let types = (options.types|0)||3;
         let min_obj = (options['min-objects']|0)||1;
-        let max_obj = (options['max-objects']|0)||5;
+        let max_obj = (options['max-objects']|0)||6;
         let total = (options['total-value']|0)||10;
         let max_rounds = (options['max-rounds']|0)||5;
         if (types<2 || types>10)
             die('--types must be between 2 and 10');
         if (min_obj<1 || min_obj>10)
             die('--min-objects must be between 1 and 10');
-        if (max_obj<1 || max_obj>10)
+        if (max_obj<1 || max_obj>100)
             die('--max-objects must be between 1 and 10');
         if (min_obj>max_obj)
             die('--min-objects cannot exceed --max-objects');
