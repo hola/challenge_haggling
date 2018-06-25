@@ -8,7 +8,7 @@ const log = require('./log.js');
 const session = require('./session.js');
 const ui = require('./ui.js');
 const getopt = require('node-getopt').create([
-    ['l', 'log=FILE.json', 'log the session into a file'],
+    ['l', 'log=FILE.json', 'log the session into a machine-readable file'],
     ['r', 'replay=FILE.json', 'replay a logged session'],
     ['t', 'timeout=MS',
         'enforce timeout upon scripts (default: do not enforce)'],
