@@ -143,7 +143,7 @@ function main(){
         if (min_obj<1 || min_obj>10)
             die('--min-objects must be between 1 and 10');
         if (max_obj<1 || max_obj>100)
-            die('--max-objects must be between 1 and 10');
+            die('--max-objects must be between 1 and 100');
         if (min_obj>max_obj)
             die('--min-objects cannot exceed --max-objects');
         if (total<max_obj)
