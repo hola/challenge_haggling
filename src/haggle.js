@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 'use strict'; /*jslint node:true*/
 const cluster = require('cluster');
 const random_js = require('random-js');
