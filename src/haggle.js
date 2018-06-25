@@ -66,7 +66,7 @@ function main(){
             die('--replay must be used without other arguments');
         return log.replay(options.replay, new ui.Logger());
     }
-    let mk_agent = [], remote;
+    let mk_agent = [], remote, shuffle = false;
     for (let a of argv)
     {
         if (/^wss?:\/\//.test(a))
@@ -96,12 +96,14 @@ function main(){
         if (options.quiet)
             die('--quiet cannot be used with a human agent');
         mk_agent[0] = (...arg)=>new ui.Agent(...arg);
+        shuffle = true;
     }
     if (!mk_agent[1] && !remote)
     {
         if (options.quiet)
             die('--quiet cannot be used with a human agent');
         mk_agent[1] = (...arg)=>new ui.Agent(...arg);
+        shuffle = true;
     }
     let loggers = [];
     if (!options.quiet)
@@ -160,7 +162,7 @@ function main(){
         }
         multi_logger.log('seed', seed);
         let random = new random_js(random_js.engines.mt19937().seed(seed));
-        if (random.bool())
+        if (random.bool() && shuffle)
             mk_agent = [mk_agent[1], mk_agent[0]];
         new session.Session(generator.get(random), mk_agent, multi_logger);
     }

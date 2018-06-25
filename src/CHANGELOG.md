@@ -16,3 +16,6 @@
 * Fixed documentation: --min-objects and --max-objects are about the total number of objects rather than objects per type
 * Set default --max-objects to 6 and documented that
 
+## 2018-06-25
+
+* When two scripts are specified on the command line, use them in that order
