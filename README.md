@@ -94,15 +94,18 @@ Bugs reported by participants get fixed, watch the [changelog](src/CHANGELOG.md)
 
 We are providing a server that lets your script negotiate with scripts of other participants. It works like a typical online game server: you connect to an “arena”, and the server pairs you with another participant who wants to play.
 
-Currently, we are providing one arena with the default settings (3 object types, up to 6 objects total, the total value for each partner $10, and a limit of 5 rounds). This arena does not enforce the 1-second timeout, so as to allow humans to participate. The URL to this arena is:
+| Arena                                                                    | Object types | Max total objects | Total value | Rounds | Time per turn | URL                                                    |
+| ------------------------------------------------------------------------ | ------------:| -----------------:| -----------:| -----: | -------------:| ------------------------------------------------------ |
+| [`standard`](https://hola.org/challenges/haggling/scores/standard)       |            3 |                 6 |          10 |      5 |     unlimited | `wss://hola.org/challenges/haggling/arena/standard`    |
+| [`standard_1s`](https://hola.org/challenges/haggling/scores/standard_1s) |            3 |                 6 |          10 |      5 |       1000 ms | `wss://hola.org/challenges/haggling/arena/standard_1s` |
+| [`large`](https://hola.org/challenges/haggling/scores/large)             |            5 |                10 |          20 |      8 |     unlimited | `wss://hola.org/challenges/haggling/arena/large`       |
+| [`large_1s`](https://hola.org/challenges/haggling/scores/large_1s)       |            5 |                10 |          20 |      8 |       1000 ms | `wss://hola.org/challenges/haggling/arena/large_1s`    |
 
-```
-wss://hola.org/challenges/haggling/arena/standard
-```
+The `standard_1s` arena has the settings that will be used in the final testing, while `standard` does not enforce the 1-second timeout to allow humans to participate. The `large` and `large_1s` arenas use a “larger” configuration just for fun.
 
-Use `haggle.js` to connect to it either as a human agent or with your script. In this mode, the `--id` command-line option is required: it is a unique ID that will be used to track your scores. We recommend using your email address with a random string appended to it as the ID. **We won't publish this ID.** Later on, we'll launch a leaderboard where the top average scores (that is, the average score per deal) will be published along with the *hash* of the ID.
+Use `haggle.js` to connect to it either as a human agent or with your script. In this mode, the `--id` command-line option is required: it is a unique ID that will be used to track your scores. We recommend using your email address with a random string appended to it as the ID. **We won't publish this ID.** Click the link in the first column of the table for machine-readable statistics; individual clients are identified by the *hash of their ID*.
 
-The server and the leaderboard are purely for your information and entertainment. The leaderboard scores will have no effect on the final standings, and you are not required to use the server at all. However, it can be a useful way to see where you stand, and to accumulate learning data to improve your script.
+The server and its statistics are purely for your information and entertainment. The scores achieved on the server will have no effect on the final standings, and you are not required to use the server at all. However, it can be a useful way to see where you stand, and to accumulate learning data to improve your script.
 
 If you have a working script, we recommend running it repeatedly whenever your computer is powered on, such as with the following UNIX shell one-liner:
 
