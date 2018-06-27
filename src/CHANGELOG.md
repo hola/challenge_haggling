@@ -19,3 +19,7 @@
 ## 2018-06-25
 
 * When two scripts are specified on the command line, use them in that order
+
+## 2018-06-25
+
+* More consistent logging of disconnection reasons

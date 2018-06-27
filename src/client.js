@@ -51,21 +51,14 @@ class Client {
                 this.logger.log(...json.arg);
                 break;
             default:
-                this.logger.log('network', 'Protocol error');
-                this.destroy(true);
+                this.destroy(true, 'Protocol error');
             }
         } catch(e){
-            this.logger.log('network', `Protocol error: ${e}`);
-            this.destroy(true);
+            this.destroy(true, `Protocol error: ${e}`);
         }
     }
-    _on_error(event){
-        this.logger.log('network', event.message);
-        this.destroy(false);
-    }
-    _on_close(event){
-        this.destroy(false);
-    }
+    _on_error(event){ this.destroy(false, event.message); }
+    _on_close(event){ this.destroy(false, event.reason); }
     _on_offer(o){
         this.ws.send(JSON.stringify({type: 'offer', offer: o}));
         this.logger.log('offer', this.me, this._expand(o));
@@ -87,7 +80,7 @@ class Client {
         res[1-this.me] = o.map((n, i)=>this.counts[i]-n);
         return res;
     }
-    destroy(close){
+    destroy(close, reason){
         if (this.agent)
             this.agent.destroy();
         this.ws.onopen = undefined;
@@ -101,7 +94,10 @@ class Client {
             else
                 this.ws.destroy();
         }
-        this.logger.log('network', 'Disconnected from remote server');
+        let msg = 'Disconnected from remote server';
+        if (reason)
+            msg += `: ${reason}`;
+        this.logger.log('network', msg);
         this.logger.finalize();
     }
 }
