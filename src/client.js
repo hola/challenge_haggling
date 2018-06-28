@@ -2,9 +2,32 @@
 const crypto = require('crypto');
 const ws = require('ws');
 
+function get_pow(id, bits){
+    loop: for (let nonce = 0;; nonce++)
+    {
+        let hash = crypto.createHash('sha256')
+            .update(`${nonce}:${id}`).digest();
+        let b = bits, i = 0;
+        while (b)
+        {
+            if (b<8)
+            {
+                if (hash[i] & ((1<<b) - 1))
+                    continue loop;
+                return String(nonce);
+            }
+            if (hash[i++])
+                continue loop;
+            b -= 8;
+        }
+        return String(nonce);
+    }
+}
+
 class Client {
     constructor(url, id, mk_agent, logger){
         let hash = crypto.createHash('md5').update(id).digest('hex');
+        this.id = id;
         this.logger = logger;
         this.logger.log('network',
             `Connecting to ${url} (ID hash ${hash})...`);
@@ -21,8 +44,6 @@ class Client {
     }
     _on_open(){
         this.connected = true;
-        this.logger.log('network',
-            'Connected to remote server, waiting for partner...');
     }
     _on_message(event){
         try {
@@ -48,6 +69,17 @@ class Client {
                 this.agent.offer(json.offer);
                 break;
             case 'log':
+                if (json.arg[0]=='network')
+                {
+                    let m = /^pow:(\d+)$/.exec(json.arg[2]);
+                    if (m)
+                    {
+                        this.logger.log('network',
+                            'Passing anti-spam test...');
+                        return this.ws.send(JSON.stringify({type: 'pow',
+                            nonce: get_pow(this.id, +m[1])}));
+                    }
+                }
                 this.logger.log(...json.arg);
                 break;
             default:
