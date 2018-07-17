@@ -27,3 +27,7 @@
 ## 2018-06-26
 
 * Added proof-of-work anti-spam measure (older clients may be asked to upgrade)
+
+## 2018-07-17
+
+* Fixed wrong offer values written to log files.

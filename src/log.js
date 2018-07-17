@@ -1,6 +1,17 @@
 'use strict'; /*jslint node:true*/
 const fs = require('fs');
 
+function clone(obj){
+    if (Array.isArray(obj))
+        return obj.map(clone);
+    if (!obj || typeof obj!='object')
+        return obj;
+    let res = {};
+    for (let key in obj)
+        res[key] = clone(obj[key]);
+    return res;
+}
+
 class Logger {
     log(type, ...arg){ this[`log_${type}`](...arg); }
     finalize(){}
@@ -29,7 +40,7 @@ class FileLogger extends Logger {
     }
     log(type, ...arg){
         if (type!='network')
-            this.data.push([type, ...arg]);
+            this.data.push([type, arg.map(clone)]);
     }
     finalize(){
         fs.writeFileSync(this.filename,
