@@ -31,3 +31,4 @@
 ## 2018-07-17
 
 * Fixed wrong offer values written to log files.
+* Fixed logging regression introduced by the previous fix.

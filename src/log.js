@@ -40,7 +40,7 @@ class FileLogger extends Logger {
     }
     log(type, ...arg){
         if (type!='network')
-            this.data.push([type, arg.map(clone)]);
+            this.data.push([type, ...arg.map(clone)]);
     }
     finalize(){
         fs.writeFileSync(this.filename,
