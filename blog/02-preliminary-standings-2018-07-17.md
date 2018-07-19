@@ -1,5 +1,7 @@
 # Preliminary Standings as of July 17, 2018 and other announcements
 
+See also the [Russian version](https://habr.com/company/hola/blog/417645/) of this page.
+
 First, a few announcements.
 
 ## Deadline extended
