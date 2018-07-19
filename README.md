@@ -13,7 +13,7 @@ See also the [Russian version](https://habr.com/company/hola/blog/414723/) of th
 ## Announcements
 
 * The deadline is extended! You can submit solutions until **July 27, 2018**, 23:59:59 UTC.
-* Preliminary standings and clarifications about the final testing are [published](blog/02-preliminary-standings-2018-07-27.md).
+* Preliminary standings and clarifications about the final testing are [published](blog/02-preliminary-standings-2018-07-17.md).
 
 ## Rules
 
