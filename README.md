@@ -12,14 +12,14 @@ See also the [Russian version](https://habr.com/company/hola/blog/414723/) of th
 
 ## Announcements
 
-* The deadline is extended! You can submit solutions until **July 27, 2018**, 23:59:59 UTC.
+* We are terribly sorry to inform you that due to a technical incident, we have lost all your submissions. We have no other choice than to ask all participants to submit their solutions again. The deadline is extended until **August 3, 2018**, 23:59:59 UTC. You can submit exactly what you submitted before, or improve your solution in the extra time available.
 * Preliminary standings and clarifications about the final testing are [published](blog/02-preliminary-standings-2018-07-17.md).
 
 ## Rules
 
 * Submit your solution to our [form](https://hola.org/challenges/haggling). Do not send solutions by e-mail!
-* Submission deadline: **July 27, 2018**, 23:59:59 UTC.
-* Preliminary results will be published on **August 3, 2018**, and final results on **August 10, 2018**.
+* Submission deadline: **August 3, 2018**, 23:59:59 UTC.
+* Preliminary results will be published on **August 10, 2018**, and final results on **August 17, 2018**.
 * You may submit more than once. Only your latest submission, as long as it's still before the deadline, will be evaluated.
 * We will use **Node.js v10.4.1** (current at the time of this publication) for testing. You can use any language features supported by the interpreter in its default configuration.
 * Your code must all be in a **single JS file**.
