@@ -131,7 +131,7 @@ function main(){
     }
     else
     {
-        let seed = options.seed|0 || undefined;
+        let seed = options.seed>>>0 || undefined;
         if (options.id)
             die('--id cannot be used without a remote server');
         if (!Number.isFinite(seed))

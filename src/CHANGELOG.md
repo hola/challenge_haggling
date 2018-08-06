@@ -32,3 +32,7 @@
 
 * Fixed wrong offer values written to log files.
 * Fixed logging regression introduced by the previous fix.
+
+## 2018-08-06
+
+* Fixed handling of large seed values on the command line.
