@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "es2018"
+    ],
+    "target": "es2017",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "outDir": "./build",
+    "rootDir": "./src",
+    "sourceMap": true,
+    "typeRoots" : ["./node_modules/@types"],
+    "allowJs": false,
+    "experimentalDecorators": true,
+    "declaration": true,
+    "noImplicitAny": false,
+    "noImplicitUseStrict": false,
+    "removeComments": true,
+    "noLib": false,
+    "preserveConstEnums": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "strictNullChecks": true
+  },
+  "include": [
+    "./src/**/*.ts"
+  ],
+  "exlude": [
+    "node_modules"
+  ],
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
+  }
+}

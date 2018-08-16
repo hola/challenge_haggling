@@ -1,0 +1,15 @@
+*.pyc
+logs/
+saves/*
+!saves/.gitkeep
+export/*.json
+!export/*weights.json
+node_modules/
+profile.log
+prof.py
+*.swp
+bin
+lib/
+include/
+.Python
+pip-selfcheck.json

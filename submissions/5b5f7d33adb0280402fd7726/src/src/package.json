@@ -1,0 +1,11 @@
+{
+    "dependencies": {
+        "ansi-diff-stream": "1.2.1",
+        "ansi-escapes": "3.1.0",
+        "chalk": "2.4.1",
+        "keypress": "0.2.1",
+        "node-getopt": "0.3.2",
+        "random-js": "1.0.8",
+        "ws": "5.2.0"
+    }
+}

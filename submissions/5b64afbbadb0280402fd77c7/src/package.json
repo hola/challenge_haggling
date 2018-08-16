@@ -1,0 +1,29 @@
+{
+  "name": "hola-challenge",
+  "version": "1.0.1",
+  "description": "Hola.org JS Challenge Summer 2018: Haggling",
+  "main": "agent.js",
+  "scripts": {
+    "test": "xo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/19cah/hola-challenge.git"
+  },
+  "keywords": [
+    "hola-challenge",
+    "nodejs",
+    "js",
+    "javascript"
+  ],
+  "author": "Carlos Abraham",
+  "license": "BSD 2-Clause",
+  "bugs": {
+    "url": "https://github.com/19cah/hola-challenge/issues"
+  },
+  "homepage": "https://github.com/19cah/hola-challenge#readme",
+  "devDependencies": {
+    "xo": "^0.21.1",
+    "node": "^10.4.1"
+  }
+}

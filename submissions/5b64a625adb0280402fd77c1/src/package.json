@@ -1,0 +1,21 @@
+{
+  "name": "haggling_rl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "node-fetch": "^2.1.2",
+    "random-js": "^1.0.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "gh:indutny/haggling_rl"
+  },
+  "keywords": [],
+  "author": "Fedor Indutny <fedor@indutny.com> (http://darksi.de/)",
+  "license": "MIT"
+}

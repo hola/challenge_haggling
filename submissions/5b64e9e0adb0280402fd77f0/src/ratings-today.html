@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ratings</title>
+    <style>
+        table {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+
+        table th,
+        table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #e1f5ff;
+        }
+
+        table tr:nth-child(odd) {
+            background-color: #fff;
+        }
+    </style>
+    <script crossorigin="anonymous" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        fetch('https://hola.org/challenges/haggling/scores/standard')
+            .then(response => response.json())
+            .then(data => {
+                let ratings = [];
+                for (let key in data) {
+                    let value = data[key];
+                    let today = new Date().toISOString().split('T')[0];
+                    let valueToday = value[today];
+                    if (valueToday){
+                        ratings.push({
+                            hash: key,
+                            score: valueToday.score,
+                            agreements: valueToday.agreements,
+                            sessions: valueToday.sessions,
+                            avg: valueToday.score / valueToday.sessions,
+                            p: valueToday.agreements / valueToday.sessions * 100
+                        })
+                    }
+                }
+                ratings = ratings.filter(_ => _.sessions >= 10);
+                ratings.sort((a, b) => b.avg - a.avg);
+
+                $(() => {
+                    let $container = $('#ratings tbody');
+
+                    for (let i = 0; i < ratings.length; i++) {
+                        let item = ratings[i];
+                        let num = i + 1;
+                        $('<tr>'
+                            + '<td>' + num + '</td>'
+                            + '<td>' + item.hash + '</td>'
+                            + '<td>' + item.score + '</td>'
+                            + '<td>' + item.sessions + '</td>'
+                            + '<td>' + item.agreements + '</td>'
+                            + '<td>' + Math.round(item.p) + '</td>'
+                            + '<td>' + Math.round(item.score / item.agreements * 100) / 100 + '</td>'
+                            + '<td>' + Math.round(item.avg * 100) / 100 + '</td>'
+                            + '</tr>').appendTo($container);
+                    }
+                });
+            });
+    </script>
+</head>
+
+<body>
+    <table id="ratings">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Hash</th>
+                <th>Score</th>
+                <th>Sessions</th>
+                <th>Agreements</th>
+                <th>P</th>
+                <th>S/A</th>
+                <th>Avg</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+
+</html>

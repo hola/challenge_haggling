@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Detective", "Detective\Detective.csproj", "{6EA2E0A8-5570-4626-98F0-147646697A5C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EA2E0A8-5570-4626-98F0-147646697A5C}.Debug|x86.ActiveCfg = Debug|x86
+		{6EA2E0A8-5570-4626-98F0-147646697A5C}.Debug|x86.Build.0 = Debug|x86
+		{6EA2E0A8-5570-4626-98F0-147646697A5C}.Release|x86.ActiveCfg = Release|x86
+		{6EA2E0A8-5570-4626-98F0-147646697A5C}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "noImplicitReturns": true,
+        "noEmitOnError": true,
+        "removeComments": true,
+        "preserveConstEnums": false,
+        "sourceMap": true,
+        "module": "amd",
+        "target": "es2015",
+        "outFile": "bundle.js",
+        "watch": true
+    },
+    "compileOnSave": true,
+    "exclude": [
+        "node_modules"
+    ]
+}
