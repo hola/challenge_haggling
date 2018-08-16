@@ -34,7 +34,9 @@ You can use `haggle.js --replay=LOG.json` to “replay” a session log as human
 
 According to the rules we published earlier, no more than 50 solutions are going to participate in the finals. This time, no copies of `example.js` were among the participating solutions, but because in the preliminary testing that script achieved an average score of 5.29, it's obvious that it wouldn't have been anywhere near the top 50 in round 1.
 
-Therefore, **the top 50 solutions from the table below are going to compete in the finals**.
+Therefore, **the top 50 solutions from the table below are going to compete in the finals**. They will be run pairwise on additional 500 seeds. Together with the sessions they already had with each other in round 1, 1000 seeds will decide the final standings among the finalists.
+
+The final results will be published on **August 20, 2018**.
 
 ## Scores
 
