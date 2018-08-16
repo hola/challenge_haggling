@@ -1,14 +1,10 @@
-# Preliminary Standings as of July 17, 2018 and other announcements
+*[Previous post](01-rules.md)* | *[Next post](03-round1-results.md)*
+
+# Preliminary Standings as of July 17, 2018 and Clarifications on the Final Testing
 
 See also the [Russian version](https://habr.com/company/hola/blog/417645/) of this page.
 
 First, a few announcements.
-
-## Deadline extended
-
-The submission deadline is extended until **July 27, 2018**, 23:59:59 UTC. Likewise, the dates when the results will be published are pushed one week into the future.
-
-The deadline is being extended so as to allow more people to participate despite the vacation season.
 
 ## Clarifications on the final testing
 
