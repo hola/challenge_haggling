@@ -10,7 +10,7 @@ The names of the participants (or nicknames for those who prefer that) will be p
 
 ## Seeds
 
-As promised, we took the first tweet that [@SpringerTV] has written after the submission deadline, and put it into the previously published script the seed sequence. The script with the tweet inserted, that produces 500 seeds for round 1 and 500 seeds for the finals, is now published as [seeds.js](../src/seeds.js).
+As promised, we took the first tweet that [@SpringerTV](https://twitter.com/SpringerTV) has written after the submission deadline, and put it into the previously published script the seed sequence. The script with the tweet inserted, that produces 500 seeds for round 1 and 500 seeds for the finals, is now published as [seeds.js](../src/seeds.js).
 
 The first 500 odd-numbered seeds have been used for round 1. You can find them in [round1.txt](../seeds/round1.txt).
 
