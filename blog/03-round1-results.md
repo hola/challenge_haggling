@@ -1,4 +1,4 @@
-*[Previous post](02-preliminary-standings-2018-07-17.md)*
+*[Previous post](02-preliminary-standings-2018-07-17.md)* | *[Next post](04-final-standings.md)*
 
 # Results of Round 1
 
@@ -26,7 +26,7 @@ Testing every ordered pair of distinct solutions out of the pool of 186 makes 34
 
 ## Raw logs
 
-The full logs of all 17,205,000 sessions of round 1 are published as an archive. (The archive is currently being uploaded; the URL will be added here as soon as it's done.) A session's log is stored in the archive as `S/A-B.json`, where `S` is the seed, `A` is the solution ID of the first participant, and `B` is the solution ID of the second participant.
+The full logs of all 17,205,000 sessions of round 1 are [published as an archive](https://cdn4.hola.org/static/round1.tar.bz2) (2.1 GB). A session's log is stored in the archive as `S/A-B.json`, where `S` is the seed, `A` is the solution ID of the first participant, and `B` is the solution ID of the second participant.
 
 You can use `haggle.js --replay=LOG.json` to “replay” a session log as human-readable text.
 

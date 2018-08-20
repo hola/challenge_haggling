@@ -8,13 +8,17 @@ Welcome to Hola programming challenge! Here is the current status:
 - [x] Publish [all solutions](submissions)
 - [x] Test all solutions in round 1
 - [x] Publish [results of round 1](blog/03-round1-results.md)
-- [ ] Test selected solutions in the finals
-- [ ] Publish final standings
-- [ ] Disclose participants and award winners
+- [x] Test selected solutions in the finals
+- [x] Publish final standings
+- [x] Disclose participants and award winners
 
 To make repeated publications more manageable, the monolithic README has been converted to a blog-like collection of documents.
 
 Contact us: challengejs@hola.org.
+
+## [Final standings](blog/04-final-standings.md)
+
+*Published on August 20, 2018*
 
 ## [Results of round 1](blog/03-round1-results.md)
 
