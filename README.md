@@ -9,7 +9,7 @@ Welcome to Hola programming challenge! Here is the current status:
 - [x] Test all solutions in round 1
 - [x] Publish [results of round 1](blog/03-round1-results.md)
 - [x] Test selected solutions in the finals
-- [x] Publish final standings
+- [x] Publish [final standings](blog/04-final-standings.md)
 - [x] Disclose participants and award winners
 
 To make repeated publications more manageable, the monolithic README has been converted to a blog-like collection of documents.
