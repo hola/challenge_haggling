@@ -1,5 +1,7 @@
 *[Previous post](03-round1-results.md)*
 
+See also the [Russian version](https://habr.com/company/hola/blog/420757/) of this post.
+
 # Final Standings
 
 After a lot of testing, we are now releasing the final standings, as well as publishing the names or pseudonyms of each solution's author.

@@ -18,7 +18,7 @@ Contact us: challengejs@hola.org.
 
 ## [Final standings](blog/04-final-standings.md)
 
-*Published on August 20, 2018*
+*Published on August 20, 2018 ([Russian version](https://habr.com/company/hola/blog/420757/))*
 
 ## [Results of round 1](blog/03-round1-results.md)
 
